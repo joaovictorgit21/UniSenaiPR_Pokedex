@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gameboy">
+    <div class="color-toggle">
+      <div class="color-dot" style="background:#e74c3c"></div>
+      <div class="color-dot" style="background:#f39c12"></div>
+      <div class="color-dot" style="background:#2ecc71"></div>
+    </div>
+    <div class="top-bar">
+      <div class="logo">GAME BOY®<br><span style="font-size:5px;letter-spacing:2px">COLOR</span></div>
+      <div class="power-led"></div>
+    </div>
+    <div class="screen-housing">
+      <div class="screen-label">· · POKÉDEX · ·</div>
+      <div class="screen" id="screen">
+        <div class="screen-content" id="screen-content">
+          <div class="idle-message">▶ POKÉDEX v2.0<br><br>INSIRA O NOME<br>DO POKÉMON<div class="pixel-arrow">▼</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="dpad">
+        <div class="dpad-h"></div>
+        <div class="dpad-v"></div>
+        <div class="dpad-center"></div>
+      </div>
+      <div class="mid-group">
+        <button class="btn-small" onclick="clearScreen()"></button>
+        <div class="btn-small-label">SELECT</div>
+      </div>
+      <div class="ab-buttons">
+        <button class="btn-ab btn-a" id="btn-prev" onclick="prev()" disabled title="Anterior">◀<span class="btn-hint">PREV</span></button>
+        <button class="btn-ab btn-b" id="btn-next" onclick="next()" disabled title="Próximo">▶<span class="btn-hint">NEXT</span></button>
+      </div>
+    </div>
+    <div class="input-area">
+      <div class="input-row">
+        <input type="text" id="putText" placeholder="EX: PIKACHU" onkeydown="if(event.key==='Enter')buscar()">
+        <button class="btn-search" onclick="buscar()">START ▶</button>
+      </div>
+    </div>
+    <div class="speaker">
+      <div class="speaker-dot"></div><div class="speaker-dot"></div><div class="speaker-dot"></div><div class="speaker-dot"></div>
+      <div class="speaker-dot"></div><div class="speaker-dot"></div><div class="speaker-dot"></div><div class="speaker-dot"></div>
+      <div class="speaker-dot"></div><div class="speaker-dot"></div><div class="speaker-dot"></div><div class="speaker-dot"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
